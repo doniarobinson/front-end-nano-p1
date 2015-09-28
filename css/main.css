@@ -35,7 +35,7 @@ h3, h4 {
     padding-bottom: 5px;
 }
 
-.headerpad {
+.header-pad {
     padding-top: 10px;
 }
 
@@ -72,7 +72,7 @@ footer p, footer a:link, footer a:visited {
 }
 
 @media screen and (min-width: 992px) {
-    .headerpad {
+    .header-pad {
         padding-top: 28px;
     }
 }
