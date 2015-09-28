@@ -1,50 +1,111 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/main.css">
-<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<title>Portfolio</title>
 </head>
 
 <body>
-  <div class="grid">
-    <div class="row btmborder">
-      <div class="col-6">
-	      <img class="logo" src="images/initials.png">
-      </div>
-      <div class="col-6 al-right">
-	      <h1>Donia Robinson</h1>
-	      <h3>Front End Developer</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-	      <img src="images/waves.jpg" alt="Roger McLassus [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons">
-	  </div>
-    </div>
-    <div class="row">
-      <div class="col-12"><h2>Featured Work</h2></div>
-    </div>
-    <div class="row">
-      <div class="col-4 al-center">
-	      <img src="http://placehold.it/310x200">
-	      <h3>Project 1</h3>
-	      <p><a href="">Link to Project 1</a></p>
-	  </div>
-	  
-      <div class="col-4 al-center">
-	      <img src="http://placehold.it/310x200">
-	      <h3>Project 2</h3>
-	      <p><a href="">Link to Project 2</a></p>
-	  </div>
-	  
-      <div class="col-4 al-center">
-	      <img src="http://placehold.it/310x200">
-	      <h3>Project 3</h3>
-	      <p><a href="">Link to Project 3</a></p>
-	  </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3 col-md-2">
+				<img class="logo" src="images/initials.png" alt="Donia Robinson">
+			</div>
+			<div class="col-xs-9 col-md-10 text-uppercase text-center">
+				<h1 class="headerpad">Donia Robinson<span class="hidden-h1">: Front End Developer</span></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<figure><img class="img-responsive" src="images/waves.jpg" alt="Roger McLassus [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons">
+				</figure>
+			</div>
+		</div>
+		<div class="row">
+			<section class="col-md-12">
+				<h2>Featured Work</h2>
+			</section>
+		</div>
+		<div class="row text-center">
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/paperclips.jpg" alt="Online Resume" data-toggle="modal" data-target="#resume">
+				</figure>
+				<h4>Online Resume</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/roads.jpg" alt="By Eleassar (Own work) (cropped by Donia Robinson) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons">
+				</figure>
+				<h4>Classic Arcade Game Clone</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/pulleys.png" alt="By User:Prolineserver, User:Tomia. (minor edits by Stanisław Skowron, scale adjusted by User:Atropos235, minor edits by Donia Robinson) (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html), CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/) or CC BY 2.5 (http://creativecommons.org/licenses/by/2.5)], via Wikimedia Commons">
+				</figure>
+				<h4>Website Optimization</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/map.jpg" alt="Neighborhood Map Project">
+				</figure>
+				<h4>Neighborhood Map Project</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/heartrate.png" alt="Health Tracker">
+				</figure>
+				<h4>Health Tracker</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+
+			<article class="col-xs-6 col-sm-4">
+				<figure><img class="img-responsive" src="images/feedreader.png" alt="Feed Reader Testing">
+				</figure>
+				<h4>Feed Reader Testing</h4>
+				<p><a href="" target="_blank">Check it out!</a>
+				</p>
+			</article>
+		</div>
+		<div class="row">
+			<footer class="col-md-12 text-center">
+				<div class="footerpad"><a href="mailto:donia@goldstarwebs.com">Email Me</a>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel1">Online Resume</h4>
+				</div>
+				<div class="modal-body">
+					I have not completed this project yet. Please check back!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
