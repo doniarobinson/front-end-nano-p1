@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* I feel that putting multiple selectors on one line makes code far more readable than on separate lines. Agree to disagree.  ;) */
 img, embed, object, video {
     max-width: 100%;
 }
@@ -63,12 +64,10 @@ footer p, footer a:link, footer a:visited {
 }
 
 @media screen and (max-width: 540px) {
-    .hidden-h1 {
-        display: none;
-    }
 
-    .headerpad {
+    .header-pad {
         padding-top: 28px;
+        font-size: 24px;
     }
 }
 
