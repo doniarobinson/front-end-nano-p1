@@ -1,78 +1,160 @@
 * {
     box-sizing: border-box;
 }
-
-/* I feel that putting multiple selectors on one line makes code far more readable than on separate lines. Agree to disagree.  ;) */
-img, embed, object, video {
+img,
+embed,
+object,
+video {
     max-width: 100%;
 }
-
 body {
-    background-color: #7e8d85;
+    background-color: #b3bfb8;
     font-family: 'Shadows Into Light Two', cursive;
 }
-
 .container {
     background-color: #f0f7f4;
 }
-
-h1, h2 {
+h1,
+h2 {
     color: #7e8d85;
     margin: 5px 0;
 }
-
-h3, h4 {
+h3,
+h4 {
     color: #3c493f;
     margin: 5px 0;
 }
-
-.btmborder {
-    border-bottom: 3px solid #3c493f;
-}
-
 .logo {
     max-width: 100px;
-    padding-bottom: 5px;
 }
-
 .header-pad {
     padding-top: 10px;
 }
-
-a:link, a:visited {
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #7e8d85;
+}
+.nav_list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.nav_item {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    padding: 12px 0;
+}
+.nav a:link {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5em;
+}
+.nav a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+footer a:link,
+footer a:visited {
+    color: #fff;
+    padding-bottom: 10px;
+}
+.nav_icon {
+    display: none;
+}
+a:link,
+a:visited {
     color: #7e8d85;
 }
-
-a:hover, a:active {
+a:hover,
+a:active {
     color: #a2e3c4;
 }
-
 footer {
     background-color: #3c493f;
 }
-
-footer p, footer a:link, footer a:visited {
-    color: #f0f7f4;
-}
-
 .footerpad {
     padding: 8px 0;
 }
-
-.portfolio {
-    max-width: 340px;
-}
-
-@media screen and (max-width: 540px) {
-
+@media screen and (max-width: 550px) {
+    .logo {
+        display: block;
+        max-width: 100%;
+    }
     .header-pad {
-        padding-top: 28px;
-        font-size: 24px;
+        padding-top: 10px;
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .col-xxs {
+        display: block;
+        float: none;
+        width: 100%;
     }
 }
-
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 551px) and (max-width: 650px) {
     .header-pad {
-        padding-top: 28px;
+        line-height: 100px;
+        padding: 0;
+        margin: 0;
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .nav {
+        z-index: 10;
+        background-color: #7e8d85;
+        width: 300px;
+        position: absolute;
+ /*       -webkit-transform: translate(-300px, 0);*/
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+    }
+    .nav.open {
+/*        -webkit-transform: translate(0, 0);*/
+        transform: translate(0, 0);
+    }
+    .nav_item {
+        display: list-item;
+        border-bottom: 1px solid #b3bfb8;
+        width: 100%;
+        text-align: left;
+    }
+    .nav_icon {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 10px 10px 0 0;
+    }
+    .nav_icon svg {
+        width: 54px;
+/* fill causes an error in the validator, but is correct usage for svg */
+        fill: #3c493f;
+    }
+}
+@media screen and (min-width: 768px) {
+    .header-pad {
+        line-height: 100px;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 1000px;
+        margin: 0 auto;
     }
 }
